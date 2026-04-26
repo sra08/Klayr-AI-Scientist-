@@ -1,0 +1,68 @@
+graph TB
+    subgraph API["API layer — FastAPI"]
+        R1["POST /api/run"]
+        R2["GET /api/plan/:id"]
+        R3["POST /api/feedback"]
+        DEP["dependencies.py\n(Depends wiring)"]
+    end
+
+    subgraph DOMAIN["Domain layer — pure Python, zero framework imports"]
+        subgraph PIPELINE["pipeline/"]
+            STATE["PipelineState\n(TypedDict)"]
+            GRAPH["StateGraph\n(LangGraph)"]
+        end
+        subgraph PROMPTS["prompts/ — pure functions"]
+            P1["hypothesis_prompt"]
+            P2["literature_prompt"]
+            P3["protocol_prompt"]
+            P4["materials_prompt"]
+            P5["budget_prompt"]
+            P6["timeline_prompt"]
+        end
+        subgraph PORTS["ports/ — ABCs"]
+            ILL["ILLMClient"]
+            ILS["ILitSearch"]
+            IER["IExperimentRepo"]
+            IC["ICache"]
+        end
+        PARSER["parsers/output_parser.py"]
+        ENTITIES["entities/experiment.py"]
+    end
+
+    subgraph INFRA["Infrastructure layer — implements ports"]
+        GQ["GroqClient → ILLMClient"]
+        subgraph SEARCH["search/"]
+            SS["SemanticScholarClient"]
+            PM["PubMedClient"]
+            CS["CombinedLitSearch → ILitSearch"]
+        end
+        PG["PostgresRepo → IExperimentRepo"]
+        RD["RedisAdapter → ICache"]
+    end
+
+    subgraph EXT["External APIs"]
+        GAPI["Groq API\n(llama-3.3-70b)"]
+        SSAPI["Semantic Scholar API"]
+        PMAPI["PubMed E-utilities"]
+        DB[("PostgreSQL")]
+        CACHE[("Redis")]
+    end
+
+    R1 & R2 & R3 --> DEP
+    DEP --> GRAPH
+    DEP --> ILL & ILS & IER & IC
+    GRAPH --> STATE
+    GRAPH --> P1 & P2 & P3 & P4 & P5 & P6
+    GRAPH --> PARSER
+    P1 & P2 & P3 & P4 & P5 & P6 --> ENTITIES
+    PARSER --> ENTITIES
+    ILL -.implements.-> GQ
+    ILS -.implements.-> CS
+    IER -.implements.-> PG
+    IC -.implements.-> RD
+    CS --> SS & PM
+    GQ --> GAPI
+    SS --> SSAPI
+    PM --> PMAPI
+    PG --> DB
+    RD --> CACHE
