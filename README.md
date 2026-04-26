@@ -236,4 +236,43 @@ The FastAPI backend exposes a versioned REST API. Full interactive documentation
 
 ---
 
+---
+
+## Working Demo
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/97af3c39-8b07-45bd-8ab2-e39eb2a8c82c" />
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/ff0f409b-c2d6-4413-bca4-fecb198e5507" />
+
+#### User Dashboard:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/a89654e5-7997-4c64-8754-9fda557fc71f" />
+
+#### Pitch your Idea:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/bccdd37e-d8d5-4874-a359-128f7beb8c53" />
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/50a5611f-8dc9-4d0e-930c-f116ecbb2aaf" />
+
+#### Agents Analytic Thinking:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/f517b5b9-accd-4505-8dec-28db1333b4f6" />
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/c254ffca-8c52-4870-a949-c413afa1d0c5" />
+
+#### Click On Export Report to View the Report:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/521c9ed3-f90c-4e49-9f75-af87a6ba97b7" />
+
+<img width="1600" height="876" alt="image" src="https://github.com/user-attachments/assets/6dc1e34c-e101-4d38-8eeb-8f0e8ccd4e04" />
+
+#### Search your relvant topics papers:
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/419573e3-de93-491a-bba3-2dcd43b5ea73" />
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/43c844e5-6f6a-401d-aa88-e43b7dfefcad" />
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/358ca6ac-267c-4ac6-bcce-96ee64fc502b" />
+
+#### You can also collaborate with other researchers who share your same interests:
+<img width="1600" height="870" alt="image" src="https://github.com/user-attachments/assets/809722e5-8682-442d-aa53-d2638a1e72b0" />
+
+
+---
+
 *Klayr — From Hypothesis to Breakthrough.*
