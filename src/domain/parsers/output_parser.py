@@ -8,15 +8,24 @@ from src.domain.entities.experiment import (
 
 logger = logging.getLogger(__name__)
 
+import re
+
 def _clean_json(raw: str) -> str:
-    """Extract the first valid-looking JSON object from the string."""
+    """Extract the first valid-looking JSON object from the string, removing comments and markdown."""
     try:
+        # Strip markdown code blocks
+        clean = re.sub(r'```(json|python|javascript)?\s*', '', raw)
+        clean = re.sub(r'```\s*', '', clean)
+        
+        # Strip single-line comments that break json.loads
+        clean = re.sub(r'//.*', '', clean)
+        
         # Find the first '{' and the last '}'
-        start = raw.find('{')
-        end = raw.rfind('}')
+        start = clean.find('{')
+        end = clean.rfind('}')
         if start != -1 and end != -1:
-            return raw[start:end+1]
-        return raw.strip()
+            return clean[start:end+1]
+        return clean.strip()
     except Exception:
         return raw.strip()
 

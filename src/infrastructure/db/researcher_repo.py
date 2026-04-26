@@ -124,6 +124,7 @@ class ResearcherRepoImpl(IResearcherRepo):
                     matching_hypothesis=row.hypothesis,
                     shared_plan_id=row.plan_id
                 ))
+        return similar
     async def check_novelty(self, hypothesis: str, limit: int = 1) -> Optional[dict]:
         query_vec = embed(hypothesis)
         sql = text("""

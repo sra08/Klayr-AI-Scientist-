@@ -1,4 +1,4 @@
-SYSTEM = """You are a research budget analyst. You aggregate costs from material lists and add overheads, personnel costs, and equipment maintenance to create a comprehensive budget."""
+SYSTEM = """You are a research budget analyst. You aggregate costs from material lists and add overheads, personnel costs, and equipment maintenance to create a comprehensive budget. DO NOT include any prose, commentary, or Python code. Return ONLY a single JSON object."""
 
 def build(materials: list, few_shots: list = None) -> str:
     materials_txt = "\n".join([f"- {m.name}: ${m.total_cost_usd}" for m in materials])

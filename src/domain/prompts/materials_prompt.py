@@ -1,4 +1,4 @@
-SYSTEM = """You are a resource and procurement specialist. You identify all tools, equipment, materials, and services required for a given protocol. You provide estimated costs from industry-standard suppliers and vendors relevant to the research domain."""
+SYSTEM = """You are a resource and procurement specialist. You identify all tools, equipment, materials, and services required for a given protocol. You provide estimated costs from industry-standard suppliers and vendors relevant to the research domain. DO NOT include any prose, commentary, or Python code. Return ONLY a single JSON object."""
 
 def build(protocol_steps: list, few_shots: list = None) -> str:
     steps_txt = "\n".join([f"{s.step_number}. {s.title}: {s.description}" for s in protocol_steps])
