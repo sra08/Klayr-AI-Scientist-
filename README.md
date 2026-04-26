@@ -4,7 +4,7 @@
 
 Klayr is a production-grade AI research platform that automates the full lifecycle of scientific experiment planning — from raw hypothesis to detailed, reviewer-ready research plans. It combines a stateful multi-agent pipeline, live literature retrieval, semantic novelty detection, and a feedback-driven learning loop designed for continuous improvement in real lab environments.
 
-## VIDEO DEMO: https://drive.google.com/drive/folders/1qSrMAGUeJs1tzKi8HqcI7rPjn9Ik17ef?usp=sharing
+## VIDEO DEMO: https://drive.google.com/file/d/192rC7L1dxdh5wfzAOMWnpyKIWPq-unZ3/view?usp=drive_link
 ---
 
 ## Table of Contents
