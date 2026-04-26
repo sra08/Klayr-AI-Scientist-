@@ -7,6 +7,10 @@ Klayr is a production-grade AI research platform that automates the full lifecyc
 ## VIDEO DEMO: https://drive.google.com/file/d/192rC7L1dxdh5wfzAOMWnpyKIWPq-unZ3/view?usp=drive_link
 ---
 
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/9c572cda-34c4-4693-b631-594e8ebbbc73" />
+
+
 ## Table of Contents
 
 - [Overview](#overview)
